@@ -277,42 +277,6 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
-<script>
-function hideTawkBranding() {
 
-    const observer = new MutationObserver(() => {
-
-        const iframe = document.querySelector('iframe[src*="tawk"]');
-
-        if (iframe) {
-
-            let blocker = document.getElementById("tawk-branding-blocker");
-
-            if (!blocker) {
-                blocker = document.createElement("div");
-                blocker.id = "tawk-branding-blocker";
-
-                blocker.style.position = "fixed";
-                blocker.style.bottom = "0px";
-                blocker.style.right = "0px";
-                blocker.style.width = "160px";
-                blocker.style.height = "36px";
-                blocker.style.background = "#ffffff";
-                blocker.style.zIndex = "999999999";
-
-                document.body.appendChild(blocker);
-            }
-        }
-
-    });
-
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
-}
-
-document.addEventListener("DOMContentLoaded", hideTawkBranding);
-</script>
 </body>
 </html>
