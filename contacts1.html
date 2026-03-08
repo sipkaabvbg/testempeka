@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<title>Контакти | EMPEKA</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f4f4f4;
+}
+
+/* HEADER */
+
+header{
+background:#111;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+margin:0;
+font-size:24px;
+letter-spacing:2px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:15px;
+}
+
+nav a:hover{
+color:#d60000;
+}
+
+/* HERO */
+
+.hero{
+background:#d60000;
+color:white;
+text-align:center;
+padding:50px 20px;
+}
+
+.hero h2{
+margin:0;
+font-size:36px;
+}
+
+/* CONTACT SECTION */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.contact-box{
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-item{
+margin-bottom:20px;
+}
+
+.contact-item a{
+color:#d60000;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* FORM */
+
+form input,
+form textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+background:#d60000;
+color:white;
+border:none;
+padding:12px 20px;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:#b50000;
+}
+
+/* MAP */
+
+.map{
+margin-top:40px;
+}
+
+iframe{
+width:100%;
+height:350px;
+border:0;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+@media(max-width:800px){
+
+.container{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>EMPEKA</h1>
+
+<nav>
+<a href="index.html">Начало</a>
+<a href="products.html">Продукти</a>
+<a href="services.html">Услуги</a>
+<a href="contacts.html">Контакти</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Свържете се с нас</h2>
+<p>Имаш въпрос или искаш оферта? Ние сме насреща.</p>
+</section>
+
+<section class="container">
+
+<div class="contact-box">
+
+<h3>Контактна информация</h3>
+
+<div class="contact-item">
+📞 <strong>Телефон</strong><br>
+<a href="tel:0887775102">0887 775 102</a><br>
+  <a href="viber://chat?number=%2B359887775102" style="color: #7360f2;">📱 Пиши ни във Viber</a><br>
+<a href="tel:0882656691">0882 656 691</a>
+</div>
+
+<div class="contact-item">
+  ✉️ <strong>Email</strong><br>
+  <a href="mailto:office@empeka.com">office@empeka.com</a>
+</div>
+<a href="mailto:ivanov.alexander.sf@gmail.com?subject=Запитване за проект - EMPEKA&body=Здравейте, прикачвам проект за печат върху тениски. Моля за оферта." 
+   style="background: #d60000; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+   Изпрати запитване
+</a>
+<div class="contact-item">
+📍 <strong>Адрес</strong><br>
+Пловдив, България
+</div>
+
+</div>
+
+<div class="contact-box">
+
+<h3>Изпрати запитване</h3>
+
+<form action="send_mail.php" method="POST" enctype="multipart/form-data">
+    <input type="text" placeholder="Вашето име" required>
+    <input type="email" placeholder="Вашият имейл" required>
+    
+    <label style="font-size: 14px; color: #555; display: block; margin-bottom: 5px;">Прикачете вашия проект (лого/дизайн):</label>
+    <input type="file" name="project_file" accept=".jpg,.png,.pdf,.ai,.eps" style="border: 1px dashed #d60000; padding: 10px;">
+    
+    <textarea rows="5" placeholder="Опишете вашата идея (тираж, размери, разположение)..."></textarea>
+    <button type="submit">Изпрати запитване</button>
+</form>
+
+</div>
+
+</section>
+
+<!--section class="map">
+
+<iframe 
+src="https://www.google.com/maps?q=plovdiv&output=embed">
+</iframe>
+
+</section-->
+
+<section aria-labelledby="reviews-heading" class="map-wrap">
+      <h2 id="reviews-heading">Локация &amp; Отзиви</h2>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.4475015034714!2d24.7455534!3d42.135977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1b3b66dc529:0xc43ee7de7e45c05d!2sEmpeka%20Ltd!5e0!3m2!1sbg!2sbg!4v1681234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Empeka Ltd в Google Maps"></iframe>
+
+      <p style="font-size:.9rem;color:#555;">
+        * Щракнете върху рейтинга в картата, за да разгледате всички ревюта директно в Google Maps.
+      </p>
+
+
+<footer style="background:#111; color:white; padding:40px 20px; margin-top:40px;">
+    <div style="max-width:1100px; margin:auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:30px; text-align:left;">
+        
+        <div>
+            <h3 style="color:#d60000; margin-bottom:15px;">EMPEKA</h3>
+            <p style="font-size:14px; line-height:1.6; color:#ccc; margin-bottom: 20px;">
+                Специализирано студио за печат върху тениски и изработка на рекламни материали
+            </p>
+            <div style="display: flex; gap: 15px;">
+                <a href="https://facebook.com/yourpage" target="_blank" style="text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width: 24px; filter: invert(1); opacity: 0.8;">
+                </a>
+                <a href="https://instagram.com/yourpage" target="_blank" style="text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 24px; filter: invert(1); opacity: 0.8;">
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <h4 style="margin-bottom:15px;">Полезни връзки</h4>
+            <ul style="list-style:none; padding:0; font-size:14px; margin:0;">
+                <li style="margin-bottom:8px;"><a href="index.html" style="color:#ccc; text-decoration:none;">Начало</a></li>
+                <li style="margin-bottom:8px;"><a href="products.html" style="color:#ccc; text-decoration:none;">Продукти</a></li>
+                <li style="margin-bottom:8px;"><a href="contacts.html" style="color:#ccc; text-decoration:none;">Контакти</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 style="margin-bottom:15px;">Сигурна доставка с:</h4>
+            <div style="display:flex; gap:10px; align-items:center; padding:5px; border-radius:5px; width:fit-content;">
+                <img src="poshti.png" alt="Доставка" style="max-width: 100%; height: auto;">
+            </div>
+            <p style="font-size:12px; margin-top:10px; color:#aaa;">Плащане при доставка (Наложен платеж)</p>
+        </div>
+
+    </div>
+
+    <div style="border-top:1px solid #333; margin-top:30px; padding-top:20px; text-align:center; font-size:13px; color:#777;">
+        <p>© 2025 EMPEKA | Всички права запазени.</p>
+    </div>
+</footer>
+</body>
+</html>

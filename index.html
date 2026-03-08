@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Empeka - Тениски и Ситопечат</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f5f5f5;
+color:#333;
+}
+
+header{
+background:#111;
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+margin:0;
+font-size:24px;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+height:500px;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h2{
+font-size:48px;
+}
+
+.btn{
+background:#ff3c00;
+padding:12px 25px;
+color:white;
+text-decoration:none;
+border-radius:5px;
+margin-top:20px;
+display:inline-block;
+}
+
+.section{
+padding:60px 10%;
+background:white;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#fafafa;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h3{
+margin-top:0;
+}
+
+.stats{
+display:flex;
+justify-content:space-around;
+background:#111;
+color:white;
+padding:40px;
+}
+
+.stat{
+text-align:center;
+}
+
+footer{
+background:#222;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+</style>
+<script>
+function loadFacebookPixel() {
+    // Тук поставете реалния код на вашия Facebook Pixel
+    console.log("Facebook Pixel е зареден успешно.");
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'ВАШИЯТ_PIXEL_ID');
+    fbq('track', 'PageView');
+}
+
+function acceptCookies() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    loadFacebookPixel();
+    hideBanner();
+}
+
+function hideBanner() {
+    document.getElementById('cookie-banner').style.display = 'none';
+}
+
+window.onload = function() {
+    if (localStorage.getItem('cookiesAccepted') === 'true') {
+        loadFacebookPixel();
+    } else {
+        document.getElementById('cookie-banner').style.display = 'block';
+    }
+};
+</script>
+</head>
+
+<body>
+
+<header>
+<a href="index.html" style="text-decoration: none;">
+    <img src="https://empeka.com/logo.png" alt="Лого ЕМПЕКА / Stedman България" style="height: 50px; width: auto; display: block;">
+  </a>
+<nav>
+<a href="index.html">Начало</a>
+<a href="products.html">Продукти</a>
+<a href="services.html">Услуги</a>
+<a href="contacts.html">Контакти</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h2>Тениски и Ситопечат</h2>
+<p>Професионално брандиране на текстил</p>
+<a class="btn" href="#">Разгледай каталога</a>
+</div>
+</section>
+
+<section class="section">
+<h2>Нашите услуги</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Ситопечат</h3>
+<p>Професионален печат върху тениски и текстил.</p>
+</div>
+
+<div class="card">
+<h3>DTF печат</h3>
+<p>Високо качество на печат за малки и големи серии.</p>
+</div>
+
+<div class="card">
+<h3>Складови наличности</h3>
+<p>Хиляди тениски налични за бърза доставка.</p>
+</div>
+
+</div>
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>20+</h2>
+<p>Години опит</p>
+</div>
+
+<div class="stat">
+<h2>400 000+</h2>
+<p>Тениски на склад</p>
+</div>
+
+<div class="stat">
+<h2>2000m²</h2>
+<p>Складова база</p>
+</div>
+
+</section>
+
+
+
+<footer style="background:#111; color:white; padding:40px 20px; margin-top:40px;">
+    <div style="max-width:1100px; margin:auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:30px; text-align:left;">
+        
+        <div>
+            <h3 style="color:#d60000; margin-bottom:15px;">EMPEKA</h3>
+            <p style="font-size:14px; line-height:1.6; color:#ccc; margin-bottom: 20px;">
+                Специализирано студио за печат върху тениски и изработка на рекламни материали
+            </p>
+            <div style="display: flex; gap: 15px;">
+                <a href="https://facebook.com/yourpage" target="_blank" style="text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width: 24px; filter: invert(1); opacity: 0.8;">
+                </a>
+                <a href="https://instagram.com/yourpage" target="_blank" style="text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 24px; filter: invert(1); opacity: 0.8;">
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <h4 style="margin-bottom:15px;">Полезни връзки</h4>
+            <ul style="list-style:none; padding:0; font-size:14px; margin:0;">
+                <li style="margin-bottom:8px;"><a href="index.html" style="color:#ccc; text-decoration:none;">Начало</a></li>
+                <li style="margin-bottom:8px;"><a href="products.html" style="color:#ccc; text-decoration:none;">Продукти</a></li>
+                <li style="margin-bottom:8px;"><a href="contacts.html" style="color:#ccc; text-decoration:none;">Контакти</a></li>
+				<li style="margin-bottom:8px;">
+    <a href="privacy.html" style="color:#ccc; text-decoration:none;">Политика за поверителност</a>
+</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 style="margin-bottom:15px;">Сигурна доставка с:</h4>
+            <div style="display:flex; gap:10px; align-items:center; padding:5px; border-radius:5px; width:fit-content;">
+                <img src="poshti.png" alt="Доставка" style="max-width: 100%; height: auto;">
+            </div>
+            <p style="font-size:12px; margin-top:10px; color:#aaa;">Плащане при доставка (Наложен платеж)</p>
+        </div>
+
+    </div>
+
+    <div style="border-top:1px solid #333; margin-top:30px; padding-top:20px; text-align:center; font-size:13px; color:#777;">
+        <p>© 2025 EMPEKA | Всички права запазени.</p>
+    </div>
+</footer>
+<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: #111; color: white; padding: 20px; text-align: center; z-index: 9999; border-top: 3px solid #d60000;">
+    <p style="margin: 0 0 10px 0; font-size: 14px;">
+        Този сайт използва бисквитки за подобряване на потребителското изживяване. 
+    </p>
+    <button onclick="acceptCookies()" style="background: #d60000; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; font-weight: bold;">Приемам всички</button>
+    <button onclick="hideBanner()" style="background: transparent; color: #ccc; border: 1px solid #ccc; padding: 10px 20px; cursor: pointer; border-radius: 5px; margin-left: 10px;">Отказвам</button>
+</div>
+
+<a href="https://discord.gg/y7aQxTUQ" target="_blank" id="discord-chat">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" width="50">
+</a>
+
+<style>
+#discord-chat{
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index:9999;
+}
+</style>
+</body>
+</html>
